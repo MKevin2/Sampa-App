@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sampalee/cultura.dart';
 
 void main() {
   runApp(const MainApp());
@@ -6,6 +7,24 @@ void main() {
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
+
+ @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +37,34 @@ class MainApp extends StatelessWidget {
 
         bottomNavigationBar: BottomNavigationBar( // Barra de navegação ao final da página
           backgroundColor: const Color.fromARGB(255, 212, 16, 2),
-          currentIndex: 1, // Aponta o primeiro item exibido, nesse caso, o item em destaque
+          currentIndex: 1, // Aponta pro item exibido, nesse caso, o item em destaque será o segundo, lembrando que a contagem inicia no 0
           iconSize: 24, // Tamanho dos icones
           selectedFontSize: 16, // Fonte selecionada
           unselectedFontSize: 12, // // Fonte não selecionada
           selectedItemColor: const Color.fromARGB(255, 255, 255, 255), // Ícone ativo
           unselectedItemColor: const Color.fromARGB(255, 233, 230, 230), // Ícone desativado
-          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold), // 
+          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold), // Negrito
+          onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+          });
+          // Código para execução da troca de tela
+          switch (index) {
+            case 0:
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Cultura()));
+            break;
+            
+            case 1:
+              // Ação para ir para a tela "Home"
+            break;
+            
+            case 2:
+              // Ação para ir para a tela "Culinária" 
+            break;
+              default:
+            break;
+          }
+          },
             items: const [
               BottomNavigationBarItem( // Botão de navegação da cultura
                 icon: Icon(Icons.account_balance_rounded),
