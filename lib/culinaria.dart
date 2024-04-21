@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:sampalee/culinaria.dart';
+import 'package:sampalee/cultura.dart';
 import 'package:sampalee/main.dart';
 
-void cultura() {
-  runApp(const Cultura());
+void culinaria() {
+  runApp(const Culinaria());
 }
 
-class Cultura extends StatelessWidget {
-  const Cultura({super.key});
+class Culinaria extends StatelessWidget {
+  const Culinaria({super.key});
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
       appBar: AppBar( // Barra no topo do app
-        title: const Text('Cultura - Lugares Importantes'),
+        title: const Text('Culinária - Seus Restaurantes'),
         foregroundColor: Colors.white,
         backgroundColor: const Color.fromARGB(255, 212, 16, 2), /// Cor de fundo
       ),
 
         bottomNavigationBar: BottomNavigationBar( // Barra de navegação ao final da página
         backgroundColor: const Color.fromARGB(255, 212, 16, 2),
-        currentIndex: 0, // Aponta pro primeiro item, já que a contagem inicia no 0
+        currentIndex: 2, // Aponta pro item exibido, nesse caso, o item em destaque será o terceiro, lembrando que a contagem inicia no 0
         iconSize: 24, // Tamanho dos icones
         selectedFontSize: 16, // Fonte selecionada
         unselectedFontSize: 12, // // Fonte não selecionada
         selectedItemColor: const Color.fromARGB(255, 255, 255, 255), // Ícone ativo
         unselectedItemColor: const Color.fromARGB(255, 233, 230, 230), // Ícone desativado
-        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold), // 
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold), // Negrito
         onTap: (int index) {
           // Código para execução da troca de tela
           switch (index) {
@@ -47,15 +47,15 @@ class Cultura extends StatelessWidget {
           }
           },
         items: const [
-          BottomNavigationBarItem(
+          BottomNavigationBarItem( // Botão de navegação da cultura
             icon: Icon(Icons.account_balance_rounded),
             label: "Cultura",
           ),
-          BottomNavigationBarItem(
+          BottomNavigationBarItem( // Botão de navegação da home
             icon: Icon(Icons.home_rounded),
             label: "Home",
           ),
-          BottomNavigationBarItem(
+          BottomNavigationBarItem( // Botão de navegação da culinária
             icon: Icon(Icons.add_business_rounded),
             label: "Culinária",
           ),
@@ -72,22 +72,22 @@ class Cultura extends StatelessWidget {
           Center(
             child: ListView(
               padding: const EdgeInsets.all(50.0),
-              children: const <Widget>[
+                children: const <Widget>[
                 Text(
-                  "MUSEU DA MIGRAÇÃO JAPONESA",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.red, // Código para sublinhar
-                    decorationThickness: 1, // Definir o tamanho do sublinhado
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 10, 10, 10),
+                  "RESTAURANTE TAKO",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.red, // Código para sublinhar
+                      decorationThickness: 1, // Definir tamanho da espessura
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 10, 10, 10),
                   ),
                 ),
 
                 Text(
-                  'APRESENTA AO PÚBLICO COMO AS FAMÍLIAS JAPONESAS CHEGARAM AO BRASIL, TRAZENDO CULTURA, E ARTE EM SEUS TRÊS ANDARES\n',
+                  'RODÍZIO: SASHIMIS DE ATUM, SALMÃO E PEIXE BRANCO, YAKISOBA E TEMAKI\n',
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontSize: 20,
@@ -97,12 +97,35 @@ class Cultura extends StatelessWidget {
                 ),
 
                 Text(
-                  "TEMPLO LOHAN",
+                  "RESTAURANTE MUGUI",
                   textAlign: TextAlign.start,
-                  style: TextStyle( // Estilização do texto
+                  style: TextStyle(
                     decoration: TextDecoration.underline,
-                    decorationColor: Colors.red,
-                    decorationThickness: 1,
+                    decorationColor: Colors.red, // Cor do sublinhado
+                    decorationThickness: 1, // Espessura do sublinhado
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 10, 10, 10),
+                  ),
+                ),
+                  
+                Text(
+                  "PRATOS QUENTES: UDON GYOZAS, TEMPURÁ, SOBÁ LÁMEN, MISSOHIRO",
+                  textAlign: TextAlign.justify,
+                  style: TextStyle( 
+                    fontSize: 20,
+                    fontWeight: FontWeight.normal,
+                    color:   Color.fromARGB(255, 212, 16, 2),
+                  ),
+                ),
+
+                Text(
+                  "RESTAURANTE TAMPOPO",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    decorationColor: Colors.red, // Cor do sublinhado
+                    decorationThickness: 1, // Espessura do sublinhado
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 10, 10, 10),
@@ -110,8 +133,8 @@ class Cultura extends StatelessWidget {
                 ),
 
                 Text(
-                  "UM TEMPLO ANTIGO EMPENHADO EM PRODUZIR CONTEÚDO DE BUDISMO, KUNG FU, WU QI, MEDICINA TRADICIONAL, ARTES, FILOSOFIA E LITERATURA CHINESA",
-                  textAlign: TextAlign.justify, // Justificar o texto
+                  "PANQUECAS FRITAS: BACON, FRANGO E CARNE DE PORCO FEITOS DE TEMPURÁ E MOLHO",
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.normal,

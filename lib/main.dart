@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sampalee/cultura.dart';
+import 'package:sampalee/culinaria.dart';
 
 void main() {
   runApp(const MainApp());
@@ -24,7 +25,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -46,20 +46,19 @@ class _HomePageState extends State<HomePage> {
           selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold), // Negrito
           onTap: (int index) {
           setState(() {
-            _currentIndex = index;
           });
           // Código para execução da troca de tela
           switch (index) {
             case 0:
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const Cultura()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Cultura())); // Caminho pra tela "Cultura"
             break;
             
             case 1:
-              // Ação para ir para a tela "Home"
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage())); // Caminho pra tela "Home"
             break;
             
             case 2:
-              // Ação para ir para a tela "Culinária" 
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Culinaria())); // Caminho pra tela "Culinária"
             break;
               default:
             break;
