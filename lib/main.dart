@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sampalee/cultura.dart';
 import 'package:sampalee/culinaria.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,9 +19,10 @@ class MainApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomePageState createState() => _HomePageState();
 }
 
@@ -121,7 +123,8 @@ class _HomePageState extends State<HomePage> {
 
                     ElevatedButton(
                       onPressed: () {
-                      // Ações do botão
+                      // ignore: deprecated_member_use
+                      launch('https://www.google.com/maps/place/Liberdade,+S%C3%A3o+Paulo+-+SP/@-23.5653311,-46.6426594,15z/data=!3m1!4b1!4m6!3m5!1s0x94ce59a00cc9896b:0x4d7fa8becba4e40d!8m2!3d-23.5599169!4d-46.6312586!16s%2Fg%2F1233lxsm?entry=ttu');
                     },
 
                     child: const Text(
