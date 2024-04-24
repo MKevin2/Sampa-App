@@ -12,7 +12,8 @@ Aplicativo que apresenta ao público telas sobre a cultura e culinária oriental
 
 > ***
 # Wiki Links
-### [Home](https://github.com/MKevin2/Sampa-App/wiki)  
+### [Home](https://github.com/MKevin2/Sampa-App/wiki)
+### [Desenvolvimento](https://github.com/MKevin2/Sampa-App/wiki/Desenvolvimento)
 ### [Telas](https://github.com/MKevin2/Sampa-App/wiki/Telas)  
 ### [Widgets](https://github.com/MKevin2/Sampa-App/wiki/Widgets)
 
