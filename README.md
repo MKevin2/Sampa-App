@@ -1,5 +1,5 @@
-# Sampa-Lee
-<img src="saMPA-LEE.png" widht="400px" height="400px"/>
+# Sampa-Liba
+<img src="Banner.png" widht="450px" height="450px"/>
 
 > ***
 # Integrantes
